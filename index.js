@@ -92,6 +92,8 @@ function Baby(name, age, favoriteToy) {
 	this.favoriteToy = favoriteToy;
 }
 Baby.prototype = Object.create(Person.prototype);
+
+
 Baby.prototype.play = function () {
 	return `Playing with ${this.favoriteToy}`;
 };
@@ -100,10 +102,10 @@ Baby.prototype.play = function () {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. Whenever a function is contained in the global scope, the value of "this" inside of that function will be the "window" object.
-  2. Whenever a function is called by a preceding dot, the object before that dot is "this".
-  3. Whenever a constructor function is used, "this" refers to the specific instance of the object that is created and returned by the constructor function.
-  4. Whenever JavaScript "call" or "apply" method is used, "this" is explicitly defined.
+  1. New Binding - when you call a bound function it will pass a function as the first argument
+  2. Implicit Binding - is used when dot notation is used to call a function.
+  3. Explicit Binding - used when calling or applying for whatever you are choosing.
+  4. Default Binding - makes "this" global whenever any of the other rules arent used
 */
 
 
